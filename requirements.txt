@@ -1,2 +1,8 @@
 pip install flask
-pip install sql-alchemy
+pip install flask-sqlalchemy
+
+// to create the database (if it needs to be remade)
+open a python shell
+
+>> from main import db
+>> db.create_all()
