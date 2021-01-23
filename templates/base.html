@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
+    <link rel="stylesheet" href="../static/styles/styles.css">
 </head>
+
 <body>
-    <h1>Template</h1>
+    <!--Header Section-->
+    <div class="topnav">
+        <nav>
+            <ul>
+                <li><a href={{ url_for('index') }}>QScores</a></li>
+                <!--Place holder initials-->
+                <li>
+                    <h3>HL</h3>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!--Right Sidebar-->
+    <div class="sidenav">
+        <h3>My Profile</h3>
+        <a href={{ url_for('settings') }}>Settings</a>
+        <a href={{ url_for('achievements') }}>Achievements</a>
+        <a href="">Add/Delete a class</a>
+    </div>
     {% block content %}
     {% endblock %}
 </body>
+
 </html>

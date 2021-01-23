@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: rgb(185, 184, 184);
+    overflow: hidden;
+}
+  
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav li h3 {
+    float: right;
+    margin-right: 20px;
+}
+
+.topnav ul {
+    list-style-type: none;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: rgb(94, 94, 94);
+    color: rgb(255, 255, 255);
+}
+
+/* The sidebar menu */
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: -1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: rgb(85, 85, 85); /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+    margin-top: 50px;
+}
+  
+/* The navigation menu links */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #000000;
+    display: block;
+}
+  
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
