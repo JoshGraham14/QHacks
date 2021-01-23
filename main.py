@@ -42,6 +42,8 @@ class Course(db.Model):
 
 # vvvvvvvvvvvvvvvvvvvvvvvvvvvv THIS IS TEMPORARY vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 
+# temp Course class
+
 
 class Crse():
     def __init__(self, code, name):
@@ -49,6 +51,7 @@ class Crse():
         self.name = name
 
 
+# list of objects to load course info
 courses = [Crse('CISC 235', 'Data Structures'),
            Crse('CISC 271', 'Linear Data Analysis'),
            Crse('CISC 365', 'Algorithms I'),
