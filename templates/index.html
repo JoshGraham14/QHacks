@@ -2,9 +2,9 @@
 {% block content %}
 <div class="container">
     <span class="course-title">
-        <h2>My classes</h2>
+        <h2>MY CLASSES</h2>
         <div class="semester">
-            <label for="cars">Semester: </label>
+            <label for="semesters">Semester: </label>
             <select name="semesters" id="semesters">
                 <option value="2020fall">2020 Fall</option>
                 <option selected="selected" value="2021winter">2021 Winter</option>
@@ -19,8 +19,11 @@
             {% for course in courses %}
             <li>
                 <div class="course-card">
-                    <h4>{{course.code}}</h4>
-                    <h5>{{course.name}}</h5>
+                    <img src="../static/img/queensflag.jpg" alt="">
+                    <div class="course-name">
+                        <h4>{{course.code}}</h4>
+                        <h5>{{course.name}}</h5>
+                    </div>
                 </div>
                 <br>
             </li>
