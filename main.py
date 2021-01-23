@@ -61,7 +61,6 @@ courses = [Crse('CISC 235', 'Data Structures'),
 # ^^^^^^^^^^^^^^^^^^^^^^^^^^ THIS IS TEMPORARY ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-@app.route('/')
 @app.route('/index')
 def index():
     return render_template('index.html', title='Welcome', courses=courses)
@@ -85,6 +84,12 @@ def login():
 @app.route('/signup')
 def signup():
     return render_template('signup.html', title='Make Your Account', page_name='Make Your Account')
+
+
+@app.route('/')
+@app.route('/home')
+def welcome():
+    return render_template('home.html')
 
 
 if __name__ == '__main__':

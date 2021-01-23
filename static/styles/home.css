@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* ------------ GENERAL PAGE SETTINGS ------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #ffd9cc;
+}
+
+/* ------------ HEADER BAR ------------ */
+.topnav {
+    background-color: #993333;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topnav h1 {
+    color: white;
+}
