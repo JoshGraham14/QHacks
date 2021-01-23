@@ -2,64 +2,49 @@ from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
-
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
 db = SQLAlchemy(app)
 
-
-class User(db.Model):
+class Student(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(30), unique=True, nullable=False)
-    email = db.Column(db.String(120), unique=True, nullable=False)
-    image = db.Column(db.String(20), nullable=True, default='default.jpg')
-    password = db.Column(db.String(60), nullable=False)
+    student_number = db.Column(db.Integer, nullable=False)
+    first_name = db.Column(db.String(50), nullable=False)
+    last_name = db.Column(db.String(50), nullable=False)
+    email = db.Column(db.String(50), nullable=False)
+    username = db.Column(db.String(50), nullable=False)
+    password = db.Column(db.String(50), nullable=False)
+    program = db.Column(db.String(50), nullable=False)
+    year = db.Column(db.Integer, nullable=False)
+    image = db.Column(db.String(50), default='default.jpg')
+    achievements = db.relationship('Achievement', backref='student', lazy=True)
     courses = db.relationship('Course', backref='student', lazy=True)
 
-    def __repr__(self):
-        return f'User({self.username}, {self.email})'
-
-
-class Achievements(db.Model):
+class Achievement(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(30), unique=True, nullable=False)
-    description = db.Column(db.String(100), nullable=True)
-    students = db.relationship('User', backref='achievement', lazy=True)
-
-    def __repr__(self):
-        return f'Achievement({self.name})'
-
+    student_id = db.Column(db.Integer, db.ForeignKey('student.id'))
+    course_id = db.Column(db.Integer, db.ForeignKey('course.id'))
+    grade = db.Column(db.Integer)
+    num_points = db.Column(db.Integer)
+    num_hours = db.Column(db.Integer)
 
 class Course(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(8), nullable=False)
-    student_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=True)
-    image = db.Column(db.String(20), nullable=False,
-                      default='default-course.jpg')
-    semester = db.Column(db.String(10), nullable=False)
+    course_name = db.Column(db.String(50))
+    image = db.Column(db.String(50), default='default.jpg')
 
-    def __repr__(self):
-        return f'Course({self.name})'
+class Section(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    instructor_id = db.Column(db.Integer, db.ForeignKey('instructor.id'))
+    section_number = db.Column(db.Integer)
+    semester = db.Column(db.String(50))
 
-# vvvvvvvvvvvvvvvvvvvvvvvvvvvv THIS IS TEMPORARY vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-
-# temp Course class
-
-
-class Crse():
-    def __init__(self, code, name):
-        self.code = code
-        self.name = name
-
-
-# list of objects to load course info
-courses = [Crse('CISC 235', 'Data Structures'),
-           Crse('CISC 271', 'Linear Data Analysis'),
-           Crse('CISC 365', 'Algorithms I'),
-           Crse('CISC 203', 'Discrete Mathematics II'),
-           Crse('CISC 204', 'Logic')]
-
-# ^^^^^^^^^^^^^^^^^^^^^^^^^^THIS IS TEMPORARY^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
+class Instructor(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    first_name = db.Column(db.String(50))
+    last_name = db.Column(db.String(50))
+    department = db.Column(db.String(50))
+    sections = db.relationship('Section', backref='instructor', lazy=True)
 
 @app.route('/')
 @app.route('/index')
