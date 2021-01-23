@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="../static/styles/login.css">
+</head>
+
+<body>
+    <!--Header Section-->
+    <div class="topnav">
+        <nav>
+            <ul>
+                <li><a href={{ url_for('index') }}>QScores</a></li>
+                <li>
+                    <h3>{{ page_name}}</h3>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* ------------ GENERAL PAGE SETTINGS ------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* ------------ HEADER BAR ------------ */
+.topnav {
+    background-color: rgb(185, 184, 184);
+    overflow: hidden;
+}
+  
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav li h3 {
+    float: right;
+    margin-right: 20px;
+    margin-top: 13px;
+}
+
+.topnav ul {
+    list-style-type: none;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: rgb(94, 94, 94);
+    color: rgb(255, 255, 255);
+}
+
+.form-container {
+    width: 45%;
+    margin: auto;
+    height: 80%;
+    margin-top: 100px;
+}

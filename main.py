@@ -58,7 +58,7 @@ courses = [Crse('CISC 235', 'Data Structures'),
            Crse('CISC 203', 'Discrete Mathematics II'),
            Crse('CISC 204', 'Logic')]
 
-# ^^^^^^^^^^^^^^^^^^^^^^^^^^THIS IS TEMPORARY^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^ THIS IS TEMPORARY ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 @app.route('/')
@@ -75,6 +75,16 @@ def settings():
 @app.route('/achievements')
 def achievements():
     return render_template('achievements.html')
+
+
+@app.route('/login')
+def login():
+    return render_template('login.html', title='Login', page_name='Login')
+
+
+@app.route('/signup')
+def signup():
+    return render_template('signup.html', title='Make Your Account', page_name='Make Your Account')
 
 
 if __name__ == '__main__':
