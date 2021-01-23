@@ -77,6 +77,10 @@
     padding-right: 20px;
 }
 
+.course-container {
+    padding-top: 20px;
+}
+
 .course-title {
     display: flex;
     justify-content: space-between;
@@ -85,4 +89,20 @@
 
 .course-list {
     list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.course-card {
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    width: 400px;
+    margin-right: 20px;
+}
+
+.course-card:hover {
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.6);
+    cursor: pointer;
 }

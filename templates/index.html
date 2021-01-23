@@ -14,14 +14,18 @@
     </span>
 
     <!--This for loop will render course codes/names to the page -->
-    <ul class="course-list">
-        {% for course in courses %}
-        <li>
-            <h4>{{course.code}}</h4>
-            <h5>{{course.name}}</h5>
-            <br>
-        </li>
-        {% endfor %}
-    </ul>
+    <div class="course-container">
+        <ul class="course-list">
+            {% for course in courses %}
+            <li>
+                <div class="course-card">
+                    <h4>{{course.code}}</h4>
+                    <h5>{{course.name}}</h5>
+                </div>
+                <br>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
 </div>
 {% endblock %}
