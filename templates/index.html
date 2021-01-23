@@ -1,4 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 <h2>Index page</h2>
+<!--This for loop will render course codes/names to the page -->
+<ul>
+    {% for course in courses %}
+    <li>
+        <h4>{{course.code}}</h4>
+        <h5>{{course.name}}</h5>
+        <br>
+    </li>
+    {% endfor %}
+</ul>
 {% endblock %}

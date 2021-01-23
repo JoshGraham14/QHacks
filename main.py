@@ -40,11 +40,28 @@ class Course(db.Model):
     def __repr__(self):
         return f'Course({self.name})'
 
+# vvvvvvvvvvvvvvvvvvvvvvvvvvvv THIS IS TEMPORARY vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+
+
+class Crse():
+    def __init__(self, code, name):
+        self.code = code
+        self.name = name
+
+
+courses = [Crse('CISC 235', 'Data Structures'),
+           Crse('CISC 271', 'Linear Data Analysis'),
+           Crse('CISC 365', 'Algorithms I'),
+           Crse('CISC 203', 'Discrete Mathematics II'),
+           Crse('CISC 204', 'Logic')]
+
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^THIS IS TEMPORARY^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('index.html', title='Welcome')
+    return render_template('index.html', title='Welcome', courses=courses)
 
 
 @app.route('/settings')
