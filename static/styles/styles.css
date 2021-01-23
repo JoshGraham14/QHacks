@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
+/* ------------ GENERAL PAGE SETTINGS ------------ */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +8,7 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-/* Add a black background color to the top navigation */
+/* ------------ HEADER BAR ------------ */
 .topnav {
     background-color: rgb(185, 184, 184);
     overflow: hidden;
@@ -26,6 +27,7 @@
 .topnav li h3 {
     float: right;
     margin-right: 20px;
+    margin-top: 13px;
 }
 
 .topnav ul {
@@ -38,17 +40,18 @@
     color: rgb(255, 255, 255);
 }
 
-/* The sidebar menu */
+/* ------------ SIDE BAR ------------ */
 .sidenav {
     height: 100%; /* Full-height: remove this if you want "auto" height */
     width: 220px; /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: -1; /* Stay on top */
+    z-index: -1; /* Stay under header */
     top: 0; /* Stay at the top */
-    right: 0;
+    right: 0; /* stay on the right of the screen */
     background-color: rgb(85, 85, 85); /* Black */
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
+    padding-left: 15px;
     margin-top: 50px;
 }
   
@@ -64,4 +67,22 @@
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
     color: #f1f1f1;
+}
+
+/* ------------ MAIN CONTENT ------------ */
+.container{
+    width: 75%;
+    margin-top: 15px;
+    padding-left: 30px;
+    padding-right: 20px;
+}
+
+.course-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.course-list {
+    list-style-type: none;
 }
