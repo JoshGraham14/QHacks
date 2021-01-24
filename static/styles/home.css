@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* ------------ GENERAL PAGE SETTINGS ------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #ffd9cc;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* ------------ HEADER BAR ------------ */
+.topnav {
+    background-color: #993333;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.topnav h1 {
+    color: white;
+}
+
+/* ------------ MAIN CONTENT ------------ */
+.main-container{
+    background-image: url("../img/ontariohall.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+.card {
+    padding: 40px;
+    text-align: center;
+    width: 250px;
+    margin-right: 25px;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-top: 20px;
+    height: 200px;
+}
+
+.colour1 {
+    background-color: #ffcc33;
+}
+
+.colour2 {
+    background-color: #fada7b;
+}
+
+.colour3 {
+    background-color: #fdedbd;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+button {
+    border: none;
+    background-color: #993333;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 15px;
+    width: 200px;
+}
+
+button:hover {
+    background-color: #ad5959;
+    cursor: pointer;
+}
+
+footer {
+    height: 60px;
+    background-color: #993333;
+}

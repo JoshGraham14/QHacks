@@ -1,5 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
+import hashlib
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -16,10 +17,12 @@ class Student(db.Model):
     password = db.Column(db.String(32))
     achievements = db.relationship('Course', secondary='Achievement', backref=db.backref('student'))
 
+
 class Course(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     course_name = db.Column(db.String(50))
     instructor_id = db.Column(db.Integer, db.ForeignKey('instructor.id'))
+
 
 class Instructor(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -66,10 +69,28 @@ class Instructor(db.Model):
 # db.session.delete(<attributename>)
 # db.session.commit()
 
-@app.route('/')
+# temp Course class
+
+
+class Crse():
+    def __init__(self, code, name):
+        self.code = code
+        self.name = name
+
+
+# list of objects to load course info
+courses = [Crse('CISC 235', 'Data Structures'),
+           Crse('CISC 271', 'Linear Data Analysis'),
+           Crse('CISC 365', 'Algorithms I'),
+           Crse('CISC 203', 'Discrete Mathematics II'),
+           Crse('CISC 204', 'Logic')]
+
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^ THIS IS TEMPORARY ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
 @app.route('/index')
 def index():
-    return render_template('index.html', title='Welcome', courses=courses)
+    return render_template('index.html', title='Welcome', courses=courses, initials="HL")
 
 
 @app.route('/settings')
@@ -79,7 +100,45 @@ def settings():
 
 @app.route('/achievements')
 def achievements():
-    return render_template('achievements.html')
+    return render_template('achievements.html', initials='HL')
+
+
+TEST_PW = '1bf6f3655e1fb026ca443867f5911b7f'
+
+
+@app.route('/login', methods=['POST', 'GET'])
+def login():
+    if request.method == "POST":
+        user = request.form['username']
+        password = request.form['password']
+        print(f'username: {user} and password: {password}')
+        hash_pw = hashlib.md5(password.encode())
+        print(f'hashed password: {hash_pw.hexdigest()}')
+        print(f'length: {len(hash_pw.hexdigest())}')
+
+        if hash_pw.hexdigest() == TEST_PW:
+            print('password matches')
+            return redirect(url_for('index', title='Welcome', courses=courses))
+        else:
+            print("passwords don't match")
+
+    return render_template('login.html', title='Login', page_name='Login')
+
+
+@app.route('/signup')
+def signup():
+    return render_template('signup.html', title='Make Your Account', page_name='Make Your Account')
+
+
+@app.route('/')
+@app.route('/home')
+def welcome():
+    return render_template('home.html')
+
+
+@app.route('/classpage')
+def classpage():
+    return render_template('classpage.html', initials='HL', title='classpage')
 
 
 if __name__ == '__main__':

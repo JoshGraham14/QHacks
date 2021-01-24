@@ -1,0 +1,13 @@
+{% extends 'logintemplate.html' %}
+{% block content %}
+<div class="form-container">
+    <form method="post" action="#" id="login-form">
+        <label for="username-field" class="login-label">Student ID</label>
+        <input type="text" name="username" id="username-field" class="login-field" autocomplete="off">
+
+        <label for="password-field" class="login-label">Password</label>
+        <input type="password" name="password" id="password-field" class="login-field" autocomplete="off">
+        <input type="submit" value="NEXT" id="login-submit">
+    </form>
+</div>
+{% endblock %}
