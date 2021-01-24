@@ -8,6 +8,7 @@
         </span>
     </div>
 
+<<<<<<< HEAD
     <script>
         // Function to change element background color
         function changeHeadingBg(color) {
@@ -16,24 +17,154 @@
     </script>
 
 
+=======
+>>>>>>> classpage
     <div class="attendance-tab">
-        <input type="button" onclick="changeHeadingBg('#f3bb13')" value="ATTENDANCE" id="attendance-button">
+        <input class="tabButtons" 
+        type="button" 
+        onclick="openTab('attendance',this,'#f3bb13');"
+        value="ATTENDANCE" 
+        id="attendance-button">
     </div>
 
     <div class="assignments-tab">
-        <input type="button" onclick="changeHeadingBg('#ffce39')" value="ASSIGNMENTS" id="assignments-button">
+        <input class="tabButtons" 
+        type="button" 
+        onclick="openTab('assignments',this,'#ffce39');"
+        value="ASSIGNMENTS" 
+        id="assignments-button">
     </div>
 
     <div class="tests-tab">
-        <input type="button" onclick="changeHeadingBg('#ffda69')" value="TESTS" id="tests-button">
+        <input class="tabButtons" 
+        type="button" 
+        onclick="openTab('tests',this,'#ffda69');" 
+        value="TESTS" 
+        id="tests-button">
     </div>
 
     <div class="breakdown-tab">
-        <input type="button" onclick="changeHeadingBg('#f3e5b6');" value="BREAKDOWN" id="breakdown-button">
+        <input class="tabButtons" 
+        type="button" 
+        onclick="openTab('breakdown',this,'#f3e5b6');"
+        value="BREAKDOWN" 
+        id="breakdown-button">
     </div>
 
 
-    <div id="big-tab"></div>
+    <div id="big-tab">
+        <div id="attendance" class="tabContent">
+            <h3>Upcoming Lectures</h3>
+            <div class="point-things">
+                <div class="container">
+                    <div class="course-points">
+                        <div class="total-qpoints"><strong>Lecture 1</strong></div>
+                    </div>
+                </div>
+    
+                <div class="container">
+                    <div class="course-points">
+                        <div class=total-courses"><strong>Lecture 2</strong></div>
+                    </div>
+                </div>
+    
+                <div class="container">
+                    <div class="course-points">
+                        <div class="lectures-attended"><strong>Lecture 3</strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="assignments" class="tabContent">
+            <h3>Upcoming Assignments</h3>
+            <div class="point-things">
+                <div class="container">
+                    <div class="course-points">
+                        <div class="total-qpoints"><strong>Assignment 1</strong></div>
+                    </div>
+                </div>
+    
+                <div class="container">
+                    <div class="course-points">
+                        <div class=total-courses"><strong>Assignment 2</strong></div>
+                    </div>
+                </div>
+    
+                <div class="container">
+                    <div class="course-points">
+                        <div class="lectures-attended"><strong>Assignment 3</strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="tests" class="tabContent">
+            <h3>Upcoming Tests</h3>
+            <div class="point-things">
+                <div class="container">
+                    <div class="course-points">
+                        <div class="total-qpoints"><strong>Test 1</strong></div>
+                    </div>
+                </div>
+    
+                <div class="container">
+                    <div class="course-points">
+                        <div class=total-courses"><strong>Test 2</strong></div>
+                    </div>
+                </div>
+    
+                <div class="container">
+                    <div class="course-points">
+                        <div class="lectures-attended"><strong>Test 3</strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="breakdown" class="tabContent">
+            <h3>Current Breakdown</h3>
+            <div class="point-things">
+                <div class="container">
+                    <div class="course-points">
+                        <div class="total-qpoints"><strong>Assignment Average: 80%</strong></div>
+                    </div>
+                </div>
+    
+                <div class="container">
+                    <div class="course-points">
+                        <div class=total-courses"><strong>Test Average: 75%</strong></div>
+                    </div>
+                </div>
+    
+                <div class="container">
+                    <div class="course-points">
+                        <div class="lectures-attended"><strong>Participation Average: 10%</strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to change element background color
+        function openTab(tabName, elmnt, color){
+            var i, tabContent, tabButtons;
+            tabContent = document.getElementsByClassName("tabContent");
+            for(i = 0; i < tabContent.length; i++){
+                tabContent[i].style.display = "none";
+            }
+
+            tabButtons = document.getElementsByClassName("tabButtons");
+            for(i = 0; i < tabButtons.length; i++){
+                tabButtons[i].style.backgroundColor = "";
+            }
+
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById('big-tab').style.backgroundColor = color;
+        }
+        openTab('attendance',document.getElementById('attendance-button'),'color');
+    </script>
 </body>
 
 {% endblock %}
