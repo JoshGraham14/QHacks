@@ -16,7 +16,11 @@
                 <li><a href={{ url_for('index') }}>QScores</a></li>
                 <!--Place holder initials-->
                 <li>
-                    <h3>HANK</h3>
+
+                    <!-- <button class="button-icon" style="text-align:center"><strong>HL</strong></button> -->
+                    <div class="initials-circle">
+                        <h1>{{ initials }}</h1>
+                    </div>
                 </li>
             </ul>
         </nav>
@@ -25,9 +29,10 @@
     <!--Right Sidebar-->
     <div class="sidenav">
         <h3>MY PROFILE</h3>
-        <a href={{ url_for('settings') }}>Settings</a>
         <a href={{ url_for('achievements') }}>Achievements</a>
         <a href="">Add/Delete a class</a>
+        <a href="">Log out</a>
+
     </div>
     {% block content %}
     {% endblock %}

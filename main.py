@@ -73,7 +73,7 @@ courses = [Crse('CISC 235', 'Data Structures'),
 
 @app.route('/index')
 def index():
-    return render_template('index.html', title='Welcome', courses=courses)
+    return render_template('index.html', title='Welcome', courses=courses, initials="HL")
 
 
 @app.route('/settings')
@@ -83,10 +83,10 @@ def settings():
 
 @app.route('/achievements')
 def achievements():
-    return render_template('achievements.html')
+    return render_template('achievements.html', initials='HL')
 
 
-TEST_PW = '81dc9bdb52d04dc20036dbd8313ed055'
+TEST_PW = '1bf6f3655e1fb026ca443867f5911b7f'
 
 
 @app.route('/login', methods=['POST', 'GET'])

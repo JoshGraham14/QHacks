@@ -79,7 +79,7 @@ body {
   
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-    color: #f1f1f1;
+    color: #993333;
 }
 
 /* ------------ MAIN CONTENT ------------ */
@@ -174,15 +174,37 @@ body {
     border-radius: 10px;
 }
 
-.button {
+.initials-circle {
+    background-color: #ffdb39;
+    width: 35px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+.initials-circle:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px rgb(255, 245, 156, 0.8);
+    background-color: #ffd9cc;
+}
+
+/* .button-icon {
     background-color: #ffdb39;
     border: none;
     color: rgb(0, 0, 0);
     padding: 20px;
     text-align: center;
     display: inline-block;
+    width: 10px;
+    height: 10px;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 50%;
-}
+    float: right;
+} */
