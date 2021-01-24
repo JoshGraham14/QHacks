@@ -245,7 +245,7 @@ body {
 
 .point-things{
     flex: 1;
-    background-color: lime;
+    color:black;
 }
 
 .achievement-things{

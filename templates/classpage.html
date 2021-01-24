@@ -7,11 +7,6 @@
             </span>
     </div>
 
-        
-
-
-    
-
     <div class="attendance-tab">
         <input class="tabButtons" 
         type="button" 
@@ -47,26 +42,98 @@
 
     <div id="big-tab">
         <div id="attendance" class="tabContent">
-            <h3>Attendance</h3>
-            <p>Content for attendance page</p>
+            <h3>Upcoming Lectures</h3>
+            <div class="point-things">
+                <div class="container">
+                    <div class="course-points">
+                        <div class="total-qpoints"><strong>Lecture 1</strong></div>
+                    </div>
+                </div>
+    
+                <div class="container">
+                    <div class="course-points">
+                        <div class=total-courses"><strong>Lecture 2</strong></div>
+                    </div>
+                </div>
+    
+                <div class="container">
+                    <div class="course-points">
+                        <div class="lectures-attended"><strong>Lecture 3</strong></div>
+                    </div>
+                </div>
+            </div>
         </div>
     
         <div id="assignments" class="tabContent">
-            <h3>Assignments</h3>
-            <p>Content for Assignments page</p>
+            <h3>Upcoming Assignments</h3>
+            <div class="point-things">
+                <div class="container">
+                    <div class="course-points">
+                        <div class="total-qpoints"><strong>Assignment 1</strong></div>
+                    </div>
+                </div>
+    
+                <div class="container">
+                    <div class="course-points">
+                        <div class=total-courses"><strong>Assignment 2</strong></div>
+                    </div>
+                </div>
+    
+                <div class="container">
+                    <div class="course-points">
+                        <div class="lectures-attended"><strong>Assignment 3</strong></div>
+                    </div>
+                </div>
+            </div>
         </div>
     
         <div id="tests" class="tabContent">
-            <h3>Tests</h3>
-            <p>Content for Tests page</p>
+            <h3>Upcoming Tests</h3>
+            <div class="point-things">
+                <div class="container">
+                    <div class="course-points">
+                        <div class="total-qpoints"><strong>Test 1</strong></div>
+                    </div>
+                </div>
+    
+                <div class="container">
+                    <div class="course-points">
+                        <div class=total-courses"><strong>Test 2</strong></div>
+                    </div>
+                </div>
+    
+                <div class="container">
+                    <div class="course-points">
+                        <div class="lectures-attended"><strong>Test 3</strong></div>
+                    </div>
+                </div>
+            </div>
         </div>
     
         <div id="breakdown" class="tabContent">
-            <h3>Breakdown</h3>
-            <p>Content for Breakdown page</p>
+            <h3>Current Breakdown</h3>
+            <div class="point-things">
+                <div class="container">
+                    <div class="course-points">
+                        <div class="total-qpoints"><strong>Assignment Average: 80%</strong></div>
+                    </div>
+                </div>
+    
+                <div class="container">
+                    <div class="course-points">
+                        <div class=total-courses"><strong>Test Average: 75%</strong></div>
+                    </div>
+                </div>
+    
+                <div class="container">
+                    <div class="course-points">
+                        <div class="lectures-attended"><strong>Participation Average: 10%</strong></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    
+
     <script>
         // Function to change element background color
         function openTab(tabName, elmnt, color){
@@ -82,9 +149,9 @@
             }
 
             document.getElementById(tabName).style.display = "block";
-            elmnt.style.backgroundColor = color;
+            document.getElementById('big-tab').style.backgroundColor = color;
         }
-        openTab('attendance',document.getElementById('attendance-button'),'#f3bb13');
+        openTab('attendance',document.getElementById('attendance-button'),'color');
     </script>
 </body>
 
