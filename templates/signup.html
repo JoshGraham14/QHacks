@@ -1,35 +1,27 @@
 {% extends 'logintemplate.html' %}
 {% block content %}
 <div class="signup-container">
-<form id="signup-form">
-    <label for="signup-name" class="signup-label">Student Name</label>
-    <input type="text" name="student-name" id="signup-name" class="signup-field" autocomplete="off">
+    <form method="post" action="#" id="signup-form">
+        <label for="signup-name" class="signup-label">Student Name</label>
+        <input type="text" name="student-name" id="signup-name" class="signup-field" autocomplete="off">
 
-    <label for="signup-studentID" class="signup-label">Student ID</label>
-    <input type="number" 
-    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" 
-    maxlength="8"
-    name="student-number" 
-    id="signup-studentID" 
-    class="signup-field" 
-    autocomplete="off">
+        <label for="signup-studentID" class="signup-label">Student ID</label>
+        <input type="number"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            maxlength="8" name="student-number" id="signup-studentID" class="signup-field" autocomplete="off">
 
-    <label for="signup-program" class="signup-label">Program</label>
-    <input type="text" name="student-program" id="signup-program" class="signup-field" autocomplete="off">
+        <label for="signup-program" class="signup-label">Program</label>
+        <input type="text" name="student-program" id="signup-program" class="signup-field" autocomplete="off">
 
-    <label for="signup-year" class="signup-label">Graduating Year</label>
-    <input type="number" 
-    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" 
-    maxlength="4" 
-    name="student-year" 
-    id="signup-year" 
-    class="signup-field" 
-    autocomplete="off">
+        <label for="signup-year" class="signup-label">Graduating Year</label>
+        <input type="number"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            maxlength="4" name="student-year" id="signup-year" class="signup-field" autocomplete="off">
 
-    <label for="signup-password" class="signup-label">Create Password</label>
-    <input type="password" name="student-password" id="signup-passowrd" class="signup-field" autocomplete="off">
+        <label for="signup-password" class="signup-label">Create Password</label>
+        <input type="password" name="student-password" id="signup-passowrd" class="signup-field" autocomplete="off">
 
-    <input type="submit" value="NEXT" id="login-submit">
-</form>
+        <input type="submit" value="NEXT" id="login-submit">
+    </form>
 </div>
 {% endblock %}
