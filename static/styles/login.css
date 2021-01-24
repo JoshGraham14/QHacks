@@ -6,11 +6,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    background-color: #ffd9cc ;
 }
 
 /* ------------ HEADER BAR ------------ */
 .topnav {
-    background-color: rgb(185, 184, 184);
+    background-color: #993333;
     overflow: hidden;
 }
   
@@ -41,8 +42,22 @@
 }
 
 .form-container {
-    width: 45%;
+    width: 35%;
     margin: auto;
     height: 80%;
     margin-top: 100px;
+}
+.login-field {
+    background-color:#ffffffea;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+#login-form {
+    display: flex;  
+    flex-direction: column;  
+}
+
+#login-submit {
+    background-color: red;
+    font-size: 17px;
 }
