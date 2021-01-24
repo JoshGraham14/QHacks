@@ -6,7 +6,15 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
-    background-color: #ffd9cc ;
+}
+
+body {
+    background-image: url("../img/granthall3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
 }
 
 /* ------------ HEADER BAR ------------ */
@@ -18,11 +26,12 @@
 /* Style the links inside the navigation bar */
 .topnav a {
     float: left;
-    color: #000000;
+    color: #ffffff;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .topnav li h3 {
@@ -44,20 +53,55 @@
 .form-container {
     width: 35%;
     margin: auto;
-    height: 80%;
+    height: 100%;
     margin-top: 100px;
+    border-radius: 7px;
+    padding-top: 200px;
 }
 .login-field {
-    background-color:#ffffffea;
+    background-color:#ffffffff;
     font-size: 17px;
     margin-bottom: 20px;
+    padding: 2%;
+    border-radius: 4px;
+    border:none;
+    width: 50%;
 }
+
+.login-field:focus{
+    outline: none;
+}
+
 #login-form {
-    display: flex;  
-    flex-direction: column;  
+    display: grid;
+    align-self:flex-start;
+    justify-items: center;
+    align-items: center;
+}
+
+.login-label {
+    color:white;
+    margin-right: 250px;
 }
 
 #login-submit {
-    background-color: red;
+    background-color: #e0b01f;
     font-size: 17px;
+    width: 20%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 50px;
+    cursor: pointer;
+    outline: none;
+}
+
+#login-submit:hover{
+    background-color:#8d6c0a ;
+    color:white;
+}
+
+.login-template {
+    color:white;
 }
