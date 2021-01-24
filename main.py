@@ -175,8 +175,8 @@ def welcome():
 
 
 @app.route('/classpage')
-def classpage():
-    return render_template('classpage.html', initials='HL', title='classpage')
+def classpage(course):
+    return render_template('classpage.html', initials=active_initials, title='classpage')
 
 
 if __name__ == '__main__':
