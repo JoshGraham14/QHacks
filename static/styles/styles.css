@@ -341,3 +341,12 @@ input[type="button"]::-moz-focus-inner {
     background-color: #993333;
     color:white;
 }
+
+.tabContent {
+    color:white;
+    display:none;
+    padding:50px;
+    text-align: center;
+}
+
+/*

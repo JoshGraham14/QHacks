@@ -7,32 +7,85 @@
             </span>
     </div>
 
-    <script>
-        // Function to change element background color
-        function changeHeadingBg(color){
-            document.getElementById('big-tab').style.background = color;
-        }
-    </script>    
+        
 
+
+    
 
     <div class="attendance-tab">
-        <input type="button" onclick="changeHeadingBg('#f3bb13')" value="ATTENDANCE" id="attendance-button">
+        <input class="tabButtons" 
+        type="button" 
+        onclick="openTab('attendance',this,'#f3bb13');"
+        value="ATTENDANCE" 
+        id="attendance-button">
     </div>
 
     <div class="assignments-tab">
-        <input type="button" onclick="changeHeadingBg('#ffce39')" value="ASSIGNMENTS" id="assignments-button">
+        <input class="tabButtons" 
+        type="button" 
+        onclick="openTab('assignments',this,'#ffce39');"
+        value="ASSIGNMENTS" 
+        id="assignments-button">
     </div>
 
     <div class="tests-tab">
-        <input type="button" onclick="changeHeadingBg('#ffda69')" value="TESTS" id="tests-button">
+        <input class="tabButtons" 
+        type="button" 
+        onclick="openTab('tests',this,'#ffda69');" 
+        value="TESTS" 
+        id="tests-button">
     </div>
 
     <div class="breakdown-tab">
-        <input type="button" onclick="changeHeadingBg('#f3e5b6');" value="BREAKDOWN" id="breakdown-button">
+        <input class="tabButtons" 
+        type="button" 
+        onclick="openTab('breakdown',this,'#f3e5b6');"
+        value="BREAKDOWN" 
+        id="breakdown-button">
     </div>
 
 
-    <div id="big-tab"></div>
+    <div id="big-tab">
+        <div id="attendance" class="tabContent">
+            <h3>Attendance</h3>
+            <p>Content for attendance page</p>
+        </div>
+    
+        <div id="assignments" class="tabContent">
+            <h3>Assignments</h3>
+            <p>Content for Assignments page</p>
+        </div>
+    
+        <div id="tests" class="tabContent">
+            <h3>Tests</h3>
+            <p>Content for Tests page</p>
+        </div>
+    
+        <div id="breakdown" class="tabContent">
+            <h3>Breakdown</h3>
+            <p>Content for Breakdown page</p>
+        </div>
+    </div>
+    
+    <script>
+        // Function to change element background color
+        function openTab(tabName, elmnt, color){
+            var i, tabContent, tabButtons;
+            tabContent = document.getElementsByClassName("tabContent");
+            for(i = 0; i < tabContent.length; i++){
+                tabContent[i].style.display = "none";
+            }
+
+            tabButtons = document.getElementsByClassName("tabButtons");
+            for(i = 0; i < tabButtons.length; i++){
+                tabButtons[i].style.backgroundColor = "";
+            }
+
+            document.getElementById(tabName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+        openTab('attendance',document.getElementById('attendance-button'),'#f3bb13');
+    </script>
 </body>
 
 {% endblock %}
