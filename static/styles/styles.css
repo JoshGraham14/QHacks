@@ -214,6 +214,46 @@ body {
     background-color: #ffd9cc;
 }
 
+/*
+.achievement-container{
+    width: 50%;
+    margin-top: 15px;
+    padding-left: 30px;
+    padding-right: 20px;
+}
+
+.course-icons{
+    text-align: center;
+    font-size: 20px;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background-color: #ffdb39;
+    text-align: center;
+    width: 380px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px;
+}
+*/
+
+.both-things{
+    display:flex;
+    flex-direction:row;
+}
+
+.point-things{
+    flex: 1;
+    background-color: lime;
+}
+
+.achievement-things{
+    flex: 2;
+    background-color: purple;
+}
+
+
 /* .button-icon {
     background-color: #ffdb39;
     border: none;
