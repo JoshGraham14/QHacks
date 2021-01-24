@@ -3,7 +3,13 @@
 <div class="form-container">
     <form method="post" action="#" id="login-form">
         <label for="username-field" class="login-label">Student ID</label>
-        <input type="text" name="username" id="username-field" class="login-field" autocomplete="off">
+        <input type="number" 
+        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" 
+        maxlength="8"
+        name="username" 
+        id="username-field" 
+        class="login-field" 
+        autocomplete="off">
 
         <label for="password-field" class="login-label">Password</label>
         <input type="password" name="password" id="password-field" class="login-field" autocomplete="off">
