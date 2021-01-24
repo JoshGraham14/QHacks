@@ -1,399 +1,376 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 
 /* ------------ GENERAL PAGE SETTINGS ------------ */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Open Sans", sans-serif;
 }
 
 body {
-    background-color: #ffd9cc;
+	background-color: #ffd9cc;
 }
 
 /* ------------ HEADER BAR ------------ */
 .topnav {
-    background-color: #993333;
-    overflow: hidden;
+	background-color: #993333;
+	overflow: hidden;
 }
-  
+
 /* Style the links inside the navigation bar */
 .topnav a {
-    float: left;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-
+	float: left;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: bold;
 }
 
 .topnav li h3 {
-    float: right;
-    margin-right: 20px;
-    margin-top: 13px;
-    color: rgb(255, 255, 255);
+	float: right;
+	margin-right: 20px;
+	margin-top: 13px;
+	color: rgb(255, 255, 255);
 }
 
 .topnav ul {
-    list-style-type: none;
+	list-style-type: none;
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
-    background-color: #ffcc33 ;
-    color: rgb(0, 0, 0);
+	background-color: #ffcc33;
+	color: rgb(0, 0, 0);
 }
 
 /* ------------ SIDE BAR ------------ */
 .sidenav {
-    height: 100vh; /* Full-height: remove this if you want "auto" height */
-    width: 220px; /* Set the width of the sidebar */
-    float: right;
-    z-index: -1; /* Stay under header */
-    top: 0; /* Stay at the top */
-    right: 0; /* stay on the right of the screen */
-    background-color: #f8d774; /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 0px;
+	height: 100vh; /* Full-height: remove this if you want "auto" height */
+	width: 220px; /* Set the width of the sidebar */
+	float: right;
+	z-index: -1; /* Stay under header */
+	top: 0; /* Stay at the top */
+	right: 0; /* stay on the right of the screen */
+	background-color: #f8d774; /* Black */
+	overflow-x: hidden; /* Disable horizontal scroll */
+	padding-top: 0px;
 }
-  
+
 .sidenav h3 {
-    background-color: #f3bb13;
-    margin: 0;
-    padding-left: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+	background-color: #f3bb13;
+	margin: 0;
+	padding-left: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 /* The navigation menu links */
 .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 14px;
-    color: #000000;
-    display: block;
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 14px;
+	color: #000000;
+	display: block;
 }
-  
+
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-    color: #993333;
+	color: #993333;
 }
 
 /* Popup log out thing */
 .popup {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .popup .popuptext {
-    visibility: hidden;
-    width: 160px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -80px;
+	visibility: hidden;
+	width: 160px;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 8px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -80px;
 }
 
 /* ------------ MAIN CONTENT ------------ */
-.container{
-    width: 75%;
-    margin-top: 15px;
-    padding-left: 30px;
-    padding-right: 20px;
+.container {
+	width: 75%;
+	margin-top: 15px;
+	padding-left: 30px;
+	padding-right: 20px;
 }
 
 .course-container {
-    padding-top: 20px;
+	padding-top: 20px;
 }
 
 .course-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .course-list {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 .course-card {
-    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    background-color: white;
-    text-align: center;
-    width: 380px;
-    margin-right: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius: 10px;    
+	box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
+	padding: 10px;
+	background-color: white;
+	text-align: center;
+	width: 380px;
+	margin-right: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	border-radius: 10px;
 }
 
 .course-card img {
-    width: 40%;
+	width: 40%;
 }
 
 .course-card:hover {
-    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.6);
-    cursor: pointer;
+	box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.6);
+	cursor: pointer;
 }
 
 .course-name {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: auto;
-    color: black;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: auto;
+	color: black;
 }
 
 /* ------------ ACHIEVEMENTS ------------ */
 
 #progressbar {
-    background-color: #20201F;
-    border-radius: 10px;
-    padding: 4px;
-    width: 300px;
-    text-align: justify;
+	background-color: #20201f;
+	border-radius: 10px;
+	padding: 4px;
+	width: 300px;
+	text-align: justify;
 }
 
-#progressbar>div {
-    background-color: #f3bb13;
-    width: 48%;
-    height: 20px;
-    border-radius: 6px;
+#progressbar > div {
+	background-color: #f3bb13;
+	width: 48%;
+	height: 20px;
+	border-radius: 6px;
 }
 
-.progress-info{
-    padding-top: 20px;
+.progress-info {
+	padding-top: 20px;
 }
 
-.course-points{
-    text-align: center;
-    font-size: 20px;
-    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    background-color: #ffdb39;
-    text-align: center;
-    width: 380px;
-    margin-right: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius: 10px;
+.course-points {
+	text-align: center;
+	font-size: 20px;
+	box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
+	padding: 20px;
+	background-color: #ffdb39;
+	text-align: center;
+	width: 380px;
+	margin-right: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	border-radius: 10px;
 }
 
 .initials-circle {
-    background-color: #ffdb39;
-    width: 35px;
-    float: right;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    height: 35px;
-    border-radius: 50%;
-    font-size: 12px;
+	background-color: #ffdb39;
+	width: 35px;
+	float: right;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+	height: 35px;
+	border-radius: 50%;
+	font-size: 12px;
 }
 
 .initials-circle:hover {
-    cursor: pointer;
-    box-shadow: 0 0 10px rgb(255, 245, 156, 0.8);
-    background-color: #ffd9cc;
+	cursor: pointer;
+	box-shadow: 0 0 10px rgb(255, 245, 156, 0.8);
+	background-color: #ffd9cc;
 }
 
-
-.achievement-container{
-    width: 50%;
-    margin-top: 15px;
-    padding-left: 0px;
-    padding-right: 0px;
+.achievement-container {
+	width: 50%;
+	margin-top: 15px;
+	padding-left: 0px;
+	padding-right: 0px;
 }
 
-.course-icons{
-    text-align: center;
-    font-size: 20px;
-    padding: 5px;
-    text-align: center;
-    width: 300px;
-    height: 300px;
-    margin-left: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    
+.course-icons {
+	text-align: center;
+	font-size: 20px;
+	padding: 5px;
+	text-align: center;
+	width: 300px;
+	height: 300px;
+	margin-left: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
 .course-icons img {
-    width: 60%;
-    margin: auto;
-    border-radius: 10px;
-    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
+	width: 60%;
+	margin: auto;
+	border-radius: 10px;
+	box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.both-things{
-    display:flex;
-    flex-direction:row;
+.both-things {
+	display: flex;
+	flex-direction: row;
 }
 
-.point-things{
-    flex: 1;
-    color:black;
+.point-things {
+	flex: 1;
+	color: black;
 }
 
-.achievement-things{
-    flex: 2;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.achievement-things {
+	flex: 2;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
-
-
-/* .button-icon {
-    background-color: #ffdb39;
-    border: none;
-    color: rgb(0, 0, 0);
-    padding: 20px;
-    text-align: center;
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 50%;
-    float: right;
-} */
 
 /* ------------ CLASS PAGE ------------ */
 
-input[type="button"]{
-    outline:none;
+input[type="button"] {
+	outline: none;
 }
 input[type="button"]::-moz-focus-inner {
-    border: 0;
+	border: 0;
 }
 
-#big-tab{
-    background-color: #f3bb13;  /* This colour will change depending on what tab is open */
-    height: 75%;
-    width: 88.5%;
-    right: 220px;
-    position: fixed;
-    margin-bottom: 0px;
-    bottom: 0px;
-    display: flex;
-    flex-wrap: nowrap;
+#big-tab {
+	background-color: #f3bb13; /* This colour will change depending on what tab is open */
+	height: 75%;
+	width: 88.5%;
+	right: 220px;
+	position: fixed;
+	margin-bottom: 0px;
+	bottom: 0px;
+	display: flex;
+	flex-wrap: nowrap;
 }
 
-#attendance-button{
-    background-color: #f3bb13; 
-    height: 60px;
-    width: 170px;
-    position: fixed;
-    bottom: 75%;
-    color:#000000;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    cursor:pointer;
-    border:none;
-    font-weight: bold;
+#attendance-button {
+	background-color: #f3bb13;
+	height: 60px;
+	width: 170px;
+	position: fixed;
+	bottom: 75%;
+	color: #000000;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	cursor: pointer;
+	border: none;
+	font-weight: bold;
 }
 
 #attendance-button:hover {
-    background-color: #993333;
-    color:white;
+	background-color: #993333;
+	color: white;
 }
 
-
-#assignments-button{
-    background-color: #FFCE39; 
-    height: 60px;
-    width: 170px;
-    position: fixed;
-    margin-left: 170px;
-    bottom: 75%;
-    color:#000000;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    cursor:pointer;
-    border:none;
-    font-weight: bold;
+#assignments-button {
+	background-color: #ffce39;
+	height: 60px;
+	width: 170px;
+	position: fixed;
+	margin-left: 170px;
+	bottom: 75%;
+	color: #000000;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	cursor: pointer;
+	border: none;
+	font-weight: bold;
 }
 
 #assignments-button:hover {
-    background-color: #993333;
-    color:white;
+	background-color: #993333;
+	color: white;
 }
 
 #tests-button {
-    background-color: #FFDA69; 
-    height: 60px;
-    width: 170px;
-    position: fixed;
-    margin-left: 340px;
-    bottom: 75%;
-    color:#000000;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    cursor:pointer;
-    border:none;
-    font-weight: bold;
+	background-color: #ffda69;
+	height: 60px;
+	width: 170px;
+	position: fixed;
+	margin-left: 340px;
+	bottom: 75%;
+	color: #000000;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	cursor: pointer;
+	border: none;
+	font-weight: bold;
 }
 #tests-button:hover {
-    background-color: #993333;
-    color:white;
+	background-color: #993333;
+	color: white;
 }
 
 #breakdown-button {
-    background-color: #F3E5B6; 
-    height: 60px;
-    width: 170px;
-    position: fixed;
-    margin-left: 510px;
-    bottom: 75%;
-    color:#000000;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    cursor:pointer;
-    border:none;
-    font-weight: bold;
+	background-color: #f3e5b6;
+	height: 60px;
+	width: 170px;
+	position: fixed;
+	margin-left: 510px;
+	bottom: 75%;
+	color: #000000;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	cursor: pointer;
+	border: none;
+	font-weight: bold;
 }
 
 #breakdown-button:hover {
-    background-color: #993333;
-    color:white;
+	background-color: #993333;
+	color: white;
 }
 
 .tabContent {
-    color:white;
-    display:none;
-    padding:50px;
-    text-align: center;
+	color: white;
+	display: none;
+	padding: 50px;
+	text-align: center;
 }
-
-/*
