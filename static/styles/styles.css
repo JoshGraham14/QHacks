@@ -245,8 +245,8 @@ body {
 
 .attendance-tab{
     background-color: #f3bb13; 
-    height: 40px;
-    width: 150px;
+    height: 60px;
+    width: 170px;
     position: fixed;
     bottom: 75%;
     color:#000000;
@@ -258,10 +258,40 @@ body {
 }
 
 .assignments-tab{
-    background-color: #f3bb13; 
-    height: 40px;
-    width: 150px;
-    position: absolute;
+    background-color: #FFCE39; 
+    height: 60px;
+    width: 170px;
+    position: fixed;
+    margin-left: 170px;
+    bottom: 75%;
+    color:#000000;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.tests-tab {
+    background-color: #FFDA69; 
+    height: 60px;
+    width: 170px;
+    position: fixed;
+    margin-left: 340px;
+    bottom: 75%;
+    color:#000000;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.breakdown-tab {
+    background-color: #F3E5B6; 
+    height: 60px;
+    width: 170px;
+    position: fixed;
+    margin-left: 510px;
     bottom: 75%;
     color:#000000;
     font-size: 20px;
