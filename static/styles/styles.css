@@ -238,7 +238,7 @@ input[type="button"]::-moz-focus-inner {
     border: 0;
 }
 
-.big-tab{
+#big-tab{
     background-color: #f3bb13;  /* This colour will change depending on what tab is open */
     height: 75%;
     width: 88.5%;
