@@ -250,6 +250,7 @@ body {
 
 .point-things{
     flex: 1;
+    color:black;
 }
 
 .achievement-things{
