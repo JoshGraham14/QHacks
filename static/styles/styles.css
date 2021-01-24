@@ -235,7 +235,9 @@ body {
     background-color: #f3bb13;  /* This colour will change depending on what tab is open */
     height: 75%;
     width: 88.5%;
-    position: absolute;
+    right: 220px;
+    position: fixed;
+    margin-bottom: 0px;
     bottom: 0px;
     display: flex;
     flex-wrap: nowrap;
@@ -245,7 +247,7 @@ body {
     background-color: #f3bb13; 
     height: 40px;
     width: 150px;
-    position: absolute;
+    position: fixed;
     bottom: 75%;
     color:#000000;
     font-size: 20px;
