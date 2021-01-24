@@ -61,6 +61,13 @@ body {
 }
 /* ------------------ LOGIN.HTML ------------------ */
 /* Login field is the class for the two bars users type into */
+#login-header {
+    text-align:center;
+    justify-self: flex-start;
+    margin-bottom: 50px;
+    color:white;
+}
+
 .login-field {
     background-color:#ffffffff;
     font-size: 17px;

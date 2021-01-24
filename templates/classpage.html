@@ -7,17 +7,32 @@
             </span>
     </div>
 
-    <div class="attendance-tab">
-        <div><strong>ATTENDANCE</strong></div>
-    </div>
-    
-    <!-- 
-    <div class="assignments-tab">
-        <div><strong>ASSIGNMENTS</strong></div>
-    </div> -->
-    
+    <script>
+        // Function to change element background color
+        function changeHeadingBg(color){
+            document.getElementById('big-tab').style.background = color;
+        }
+    </script>    
 
-    <div class="big-tab"></div>
+
+    <div class="attendance-tab">
+        <input type="button" onclick="changeHeadingBg('#f3bb13')" value="ATTENDANCE" id="attendance-button">
+    </div>
+
+    <div class="assignments-tab">
+        <input type="button" onclick="changeHeadingBg('#ffce39')" value="ASSIGNMENTS" id="assignments-button">
+    </div>
+
+    <div class="tests-tab">
+        <input type="button" onclick="changeHeadingBg('#ffda69')" value="TESTS" id="tests-button">
+    </div>
+
+    <div class="breakdown-tab">
+        <input type="button" onclick="changeHeadingBg('#f3e5b6');" value="BREAKDOWN" id="breakdown-button">
+    </div>
+
+
+    <div id="big-tab"></div>
 </body>
 
 {% endblock %}

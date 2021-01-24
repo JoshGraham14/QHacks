@@ -137,7 +137,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 10px;    
 }
 
 .course-card img {
@@ -156,6 +156,7 @@ body {
     align-items: center;
     flex-wrap: wrap;
     margin: auto;
+    color: black;
 }
 
 /* ------------ ACHIEVEMENTS ------------ */
@@ -231,21 +232,30 @@ body {
 
 /* ------------ CLASS PAGE ------------ */
 
-.big-tab{
+input[type="button"]{
+    outline:none;
+}
+input[type="button"]::-moz-focus-inner {
+    border: 0;
+}
+
+#big-tab{
     background-color: #f3bb13;  /* This colour will change depending on what tab is open */
     height: 75%;
     width: 88.5%;
-    position: absolute;
+    right: 220px;
+    position: fixed;
+    margin-bottom: 0px;
     bottom: 0px;
     display: flex;
     flex-wrap: nowrap;
 }
 
-.attendance-tab{
+#attendance-button{
     background-color: #f3bb13; 
-    height: 40px;
-    width: 150px;
-    position: absolute;
+    height: 60px;
+    width: 170px;
+    position: fixed;
     bottom: 75%;
     color:#000000;
     font-size: 20px;
@@ -253,13 +263,23 @@ body {
     justify-content: center;
     text-align: center;
     align-items: center;
+    cursor:pointer;
+    border:none;
+    font-weight: bold;
 }
 
-.assignments-tab{
-    background-color: #f3bb13; 
-    height: 40px;
-    width: 150px;
-    position: absolute;
+#attendance-button:hover {
+    background-color: #993333;
+    color:white;
+}
+
+
+#assignments-button{
+    background-color: #FFCE39; 
+    height: 60px;
+    width: 170px;
+    position: fixed;
+    margin-left: 170px;
     bottom: 75%;
     color:#000000;
     font-size: 20px;
@@ -267,4 +287,57 @@ body {
     justify-content: center;
     text-align: center;
     align-items: center;
+    cursor:pointer;
+    border:none;
+    font-weight: bold;
+}
+
+#assignments-button:hover {
+    background-color: #993333;
+    color:white;
+}
+
+#tests-button {
+    background-color: #FFDA69; 
+    height: 60px;
+    width: 170px;
+    position: fixed;
+    margin-left: 340px;
+    bottom: 75%;
+    color:#000000;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    cursor:pointer;
+    border:none;
+    font-weight: bold;
+}
+#tests-button:hover {
+    background-color: #993333;
+    color:white;
+}
+
+#breakdown-button {
+    background-color: #F3E5B6; 
+    height: 60px;
+    width: 170px;
+    position: fixed;
+    margin-left: 510px;
+    bottom: 75%;
+    color:#000000;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    cursor:pointer;
+    border:none;
+    font-weight: bold;
+}
+
+#breakdown-button:hover {
+    background-color: #993333;
+    color:white;
 }
