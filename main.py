@@ -115,28 +115,30 @@ def get_initials(fullname):
     return initials
 
 
-def get_courses(student):
-    pass
+def get_hash(password):
+    return hashlib.md5(password.encode()).hexdigest()
 
 
 @app.route('/login', methods=['POST', 'GET'])
 def login():
+    # if the login button is pressed
     if request.method == 'POST':
+        # collect data from form
         id = request.form['username']
         password = request.form['password']
-        print(f'username: {id} and password: {password}')
-        hash_pw = hashlib.md5(password.encode())
-        print(f'hashed password: {hash_pw.hexdigest()}')
+        # hash the given password
+        hash_pw = get_hash(password)
+        # get password from database based on student number
         real_pw = Student.query.filter_by(student_number=id).first()
+        # if student number or password is wrong, reload the page
         if real_pw is None:
             return render_template('login.html', title='Login', page_name='Login')
-        elif hash_pw.hexdigest() == real_pw.password:
-            print('password matches')
+        # else if the password is correct
+        elif hash_pw == real_pw.password:
             initials = get_initials(real_pw.name)
-            print(initials)
             global active_initials
             active_initials = initials
-            print(f'active_initials: {active_initials}')
+            # redirect to index, with the initials
             return redirect(url_for('index', title='Welcome', courses=courses, initials=active_initials))
         else:
             print("passwords don't match")
@@ -146,20 +148,21 @@ def login():
 
 @app.route('/signup', methods=['POST', 'GET'])
 def signup():
+    # if the next button is pressed
     if request.method == 'POST':
+        # collect data from form
         name = request.form['student-name']
         student_id = request.form['student-number']
         program = request.form['student-program']
         year = request.form['student-year']
         password = request.form['student-password']
-        password = hashlib.md5(password.encode()).hexdigest()
-
-        str_rep = f'name: {name}, id: {student_id}, program: {program}, year: {year}, password: {password}'
-        print(str_rep)
-
+        # hash the password
+        password = get_hash(password)
+        # adds student to the database
         db.session.add(Student(student_number=str(
             student_id), name=name, password=password, program=program, year=str(year)))
         db.session.commit()
+        # redirect to login page
         return redirect(url_for('login'))
 
     return render_template('signup.html', title='Make Your Account', page_name='Make Your Account')
