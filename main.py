@@ -119,5 +119,10 @@ def welcome():
     return render_template('home.html')
 
 
+@app.route('/classpage')
+def classpage():
+    return render_template('classpage.html', initials='HL', title='classpage')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
