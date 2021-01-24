@@ -92,7 +92,7 @@ courses = [Crse('CISC 235', 'Data Structures'),
 
 @app.route('/index')
 def index():
-    return render_template('index.html', title='Welcome', courses=courses, initials="HL")
+    return render_template('index.html', title='Welcome', courses=courses, initials='HL')
 
 
 @app.route('/settings')
@@ -105,22 +105,34 @@ def achievements():
     return render_template('achievements.html', initials='HL')
 
 
-TEST_PW = '1bf6f3655e1fb026ca443867f5911b7f'
+def get_initials(fullname):
+    xs = (fullname)
+    name_list = xs.split()
+
+    initials = ""
+
+    for name in name_list:  # go through each name
+        initials += name[0].upper()  # append the initial
+
+    return initials
 
 
 @app.route('/login', methods=['POST', 'GET'])
 def login():
     if request.method == 'POST':
-        user = request.form['username']
+        id = request.form['username']
         password = request.form['password']
-        print(f'username: {user} and password: {password}')
+        print(f'username: {id} and password: {password}')
         hash_pw = hashlib.md5(password.encode())
         print(f'hashed password: {hash_pw.hexdigest()}')
-        print(f'length: {len(hash_pw.hexdigest())}')
-
-        if hash_pw.hexdigest() == TEST_PW:
+        real_pw = Student.query.filter_by(student_number=id).first()
+        if real_pw is None:
+            return render_template('login.html', title='Login', page_name='Login')
+        elif hash_pw.hexdigest() == real_pw.password:
             print('password matches')
-            return redirect(url_for('index', title='Welcome', courses=courses))
+            initials = get_initials(real_pw.name)
+            print(initials)
+            return redirect(url_for('index', title='Welcome', courses=courses, initials=initials))
         else:
             print("passwords don't match")
 
@@ -143,6 +155,7 @@ def signup():
         db.session.add(Student(student_number=str(
             student_id), name=name, password=password, program=program, year=str(year)))
         db.session.commit()
+        return redirect(url_for('login'))
 
     return render_template('signup.html', title='Make Your Account', page_name='Make Your Account')
 
