@@ -231,6 +231,13 @@ body {
 
 /* ------------ CLASS PAGE ------------ */
 
+input[type="submit"]{
+    outline:none;
+}
+input[type="submit"]::-moz-focus-inner {
+    border: 0;
+}
+
 .big-tab{
     background-color: #f3bb13;  /* This colour will change depending on what tab is open */
     height: 75%;
@@ -243,7 +250,7 @@ body {
     flex-wrap: nowrap;
 }
 
-.attendance-tab{
+#attendance-submit{
     background-color: #f3bb13; 
     height: 60px;
     width: 170px;
@@ -255,9 +262,18 @@ body {
     justify-content: center;
     text-align: center;
     align-items: center;
+    cursor:pointer;
+    border:none;
+    font-weight: bold;
 }
 
-.assignments-tab{
+#attendance-submit:hover {
+    background-color: #993333;
+    color:white;
+}
+
+
+#assignments-submit{
     background-color: #FFCE39; 
     height: 60px;
     width: 170px;
@@ -270,8 +286,17 @@ body {
     justify-content: center;
     text-align: center;
     align-items: center;
+    cursor:pointer;
+    border:none;
+    font-weight: bold;
 }
-.tests-tab {
+
+#assignments-submit:hover {
+    background-color: #993333;
+    color:white;
+}
+
+#tests-submit {
     background-color: #FFDA69; 
     height: 60px;
     width: 170px;
@@ -284,9 +309,16 @@ body {
     justify-content: center;
     text-align: center;
     align-items: center;
+    cursor:pointer;
+    border:none;
+    font-weight: bold;
+}
+#tests-submit:hover {
+    background-color: #993333;
+    color:white;
 }
 
-.breakdown-tab {
+#breakdown-submit {
     background-color: #F3E5B6; 
     height: 60px;
     width: 170px;
@@ -299,4 +331,13 @@ body {
     justify-content: center;
     text-align: center;
     align-items: center;
+    cursor:pointer;
+    border:none;
+    font-weight: bold;
+
+}
+
+#breakdown-submit:hover {
+    background-color: #993333;
+    color:white;
 }
