@@ -137,3 +137,19 @@ body {
     flex-wrap: wrap;
     margin: auto;
 }
+
+/* ------------ ACHIEVEMENTS ------------ */
+
+#progressbar {
+    background-color: #20201F;
+    border-radius: 10px;
+    padding: 4px;
+    width: 300px;
+}
+
+#progressbar>div {
+    background-color: #f3bb13;
+    width: 48%;
+    height: 20px;
+    border-radius: 6px;
+}
