@@ -174,6 +174,7 @@ def welcome():
     return render_template('home.html')
 
 
+<<<<<<< HEAD
 @app.route('/classpage/<course>')
 def classpage(course):
     print(f'course: {course}')
@@ -181,6 +182,11 @@ def classpage(course):
         if i.code.replace(' ', '') == course:
             course = i
     return render_template('classpage.html', initials=active_initials, title=course.code, course=course)
+=======
+@app.route('/classpage')
+def classpage():
+    return render_template('classpage.html', initials=active_initials, title='classpage')
+>>>>>>> classpage
 
 
 if __name__ == '__main__':
