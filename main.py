@@ -18,20 +18,15 @@ class Student(db.Model):
     password = db.Column(db.String(32))
     program = db.Column(db.String(50))
     year = db.Column(db.String(5))
+    courses = db.relationship('Course', backref='student')
 
 
 class Course(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    course_name = db.Column(db.String(50))
-    instructor_id = db.Column(db.Integer, db.ForeignKey('instructor.id'))
-
-
-class Instructor(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    first_name = db.Column(db.String(50))
-    last_name = db.Column(db.String(50))
-    department = db.Column(db.String(50))
-    courses = db.relationship('Course', backref='instructor')
+    course_code = db.Column(db.String(8))
+    name = db.Column(db.String(50))
+    grade = db.Column(db.String(3))
+    student_id = db.Column(db.Integer, db.ForeignKey('student.id'))
 
 ### TO INITIALIZE NEW DATABASE ###
 # pipenv shell
@@ -89,10 +84,13 @@ courses = [Crse('CISC 235', 'Data Structures'),
 
 # ^^^^^^^^^^^^^^^^^^^^^^^^^^ THIS IS TEMPORARY ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+active_initials = ""
+
 
 @app.route('/index')
 def index():
-    return render_template('index.html', title='Welcome', courses=courses, initials='HL')
+    print(f'active_initials in index function: {active_initials}')
+    return render_template('index.html', title='Welcome', courses=courses, initials=active_initials)
 
 
 @app.route('/settings')
@@ -102,7 +100,7 @@ def settings():
 
 @app.route('/achievements')
 def achievements():
-    return render_template('achievements.html', initials='HL')
+    return render_template('achievements.html', initials=active_initials)
 
 
 def get_initials(fullname):
@@ -115,6 +113,10 @@ def get_initials(fullname):
         initials += name[0].upper()  # append the initial
 
     return initials
+
+
+def get_courses(student):
+    pass
 
 
 @app.route('/login', methods=['POST', 'GET'])
@@ -132,7 +134,10 @@ def login():
             print('password matches')
             initials = get_initials(real_pw.name)
             print(initials)
-            return redirect(url_for('index', title='Welcome', courses=courses, initials=initials))
+            global active_initials
+            active_initials = initials
+            print(f'active_initials: {active_initials}')
+            return redirect(url_for('index', title='Welcome', courses=courses, initials=active_initials))
         else:
             print("passwords don't match")
 
