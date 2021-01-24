@@ -50,6 +50,7 @@ body {
     color: rgb(255, 255, 255);
 }
 
+/* Form container is the div class for login */
 .form-container {
     width: 35%;
     margin: auto;
@@ -58,6 +59,8 @@ body {
     border-radius: 7px;
     padding-top: 200px;
 }
+/* ------------------ LOGIN.HTML ------------------ */
+/* Login field is the class for the two bars users type into */
 .login-field {
     background-color:#ffffffff;
     font-size: 17px;
@@ -71,7 +74,7 @@ body {
 .login-field:focus{
     outline: none;
 }
-
+/* Login form is the <form> object */
 #login-form {
     display: grid;
     align-self:flex-start;
@@ -79,11 +82,13 @@ body {
     align-items: center;
 }
 
+/* These are the lables on top of the login-form */
 .login-label {
     color:white;
     margin-right: 250px;
 }
 
+/* This is the button that says "NEXT" */
 #login-submit {
     background-color: #e0b01f;
     font-size: 17px;
@@ -97,11 +102,55 @@ body {
     outline: none;
 }
 
+/* Code to change the hover properties of the button */
 #login-submit:hover{
     background-color:#8d6c0a ;
     color:white;
 }
 
+/* The color of the "login" text in the top right */
 .login-template {
     color:white;
+}
+
+/* ------------------ SIGNUP.HTML  ------------------ */
+/* Makes the number buttons not have a up/down arrow */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+/* Takes away the outline for the input boxes */
+.signup-field:focus{
+    outline: none;
+}
+
+/* Makes all the labels white */
+.signup-label {
+    color:white;
+}
+
+/* The CSS for the input boxes */
+.signup-field {
+    background-color:#ffffffff;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding: 2%;
+    border-radius: 7px;
+    border:none;
+    width: 50%;
+}
+
+/* The CSS for aligning all of the objects within the form */
+#signup-form {
+    display: grid;
+    align-self:flex-start;
+    justify-items: center;
+    align-items: center;
+    width: 35%;
+    margin: auto;
+    height: 100%;
+    margin-top: 20px;
+    padding-top: 100px;
 }
