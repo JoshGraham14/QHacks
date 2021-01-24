@@ -145,6 +145,7 @@ body {
     border-radius: 10px;
     padding: 4px;
     width: 300px;
+    text-align: justify;
 }
 
 #progressbar>div {
@@ -152,4 +153,23 @@ body {
     width: 48%;
     height: 20px;
     border-radius: 6px;
+}
+
+.progress-info{
+    padding-top: 20px;
+}
+
+.course-points{
+    text-align: center;
+    font-size: 20px;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background-color: rgb(255, 219, 57);
+    text-align: center;
+    width: 380px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px;
 }
