@@ -231,10 +231,10 @@ body {
 
 /* ------------ CLASS PAGE ------------ */
 
-input[type="submit"]{
+input[type="button"]{
     outline:none;
 }
-input[type="submit"]::-moz-focus-inner {
+input[type="button"]::-moz-focus-inner {
     border: 0;
 }
 
@@ -250,7 +250,7 @@ input[type="submit"]::-moz-focus-inner {
     flex-wrap: nowrap;
 }
 
-#attendance-submit{
+#attendance-button{
     background-color: #f3bb13; 
     height: 60px;
     width: 170px;
@@ -267,13 +267,13 @@ input[type="submit"]::-moz-focus-inner {
     font-weight: bold;
 }
 
-#attendance-submit:hover {
+#attendance-button:hover {
     background-color: #993333;
     color:white;
 }
 
 
-#assignments-submit{
+#assignments-button{
     background-color: #FFCE39; 
     height: 60px;
     width: 170px;
@@ -291,12 +291,12 @@ input[type="submit"]::-moz-focus-inner {
     font-weight: bold;
 }
 
-#assignments-submit:hover {
+#assignments-button:hover {
     background-color: #993333;
     color:white;
 }
 
-#tests-submit {
+#tests-button {
     background-color: #FFDA69; 
     height: 60px;
     width: 170px;
@@ -313,12 +313,12 @@ input[type="submit"]::-moz-focus-inner {
     border:none;
     font-weight: bold;
 }
-#tests-submit:hover {
+#tests-button:hover {
     background-color: #993333;
     color:white;
 }
 
-#breakdown-submit {
+#breakdown-button {
     background-color: #F3E5B6; 
     height: 60px;
     width: 170px;
@@ -334,10 +334,9 @@ input[type="submit"]::-moz-focus-inner {
     cursor:pointer;
     border:none;
     font-weight: bold;
-
 }
 
-#breakdown-submit:hover {
+#breakdown-button:hover {
     background-color: #993333;
     color:white;
 }
