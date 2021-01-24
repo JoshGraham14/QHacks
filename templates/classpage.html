@@ -1,18 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
+
 <body>
     <div class="container">
         <span class="course-title">
-            <h2>CISC 235</h2>
-            </span>
+            <h2>{{ course.code }}</h2>
+        </span>
     </div>
 
     <script>
         // Function to change element background color
-        function changeHeadingBg(color){
+        function changeHeadingBg(color) {
             document.getElementById('big-tab').style.background = color;
         }
-    </script>    
+    </script>
 
 
     <div class="attendance-tab">

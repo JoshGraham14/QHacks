@@ -18,14 +18,14 @@
         <ul class="course-list">
             {% for course in courses %}
             <li>
-                <a style="text-decoration: none" href={{ url_for('classpage') }}>
-                <div class="course-card">
-                    <img src="../static/img/queensflag.jpg" alt="">
-                    <div class="course-name">
-                        <h4>{{course.code}}</h4>
-                        <h5>{{course.name}}</h5>
+                <a style="text-decoration: none" href={{ url_for('classpage', course=course.code| replace(' ', '')) }}>
+                    <div class="course-card">
+                        <img src="../static/img/queensflag.jpg" alt="">
+                        <div class="course-name">
+                            <h4>{{course.code}}</h4>
+                            <h5>{{course.name}}</h5>
+                        </div>
                     </div>
-                </div>
                 </a>
                 <br>
             </li>
